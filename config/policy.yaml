@@ -1,0 +1,9 @@
+# 단체가 정할 항목 (지시서 v2 14절). 정하기 전에는 더 많이 가리는 쪽을 기본값으로 둔다.
+mask_officials: true        # 담당 공무원 이름을 가릴지 (미정 → true)
+mask_org_contact: true      # 기관 대표전화·팩스·기관 주소를 가릴지 (미정 → true)
+keep_originals: true        # 원본을 보관할지 (미정)
+retention_days: null        # 원본·대조표 보관 기간(일). 미정이면 지우지 않는다
+review_mode: all            # 첫 주는 all
+mask_birthdate: false       # 생년월일 단독 표기를 가릴지
+number_all: false           # 전화번호·주소에도 번호를 붙일지
+fax_rotate_below: 0.8       # 팩스 평균 신뢰도가 이 값보다 낮으면 180도 돌려 다시 읽는다(지시서 v2 5절, 단체 PC에서 다시 정함)

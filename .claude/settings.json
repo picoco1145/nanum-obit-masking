@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(//c/nanum-mask/inbox/**)",
+      "Read(//c/nanum-mask/pending/**)",
+      "Read(//c/nanum-mask/secure/**)",
+      "Edit(//c/nanum-mask/inbox/**)",
+      "Edit(//c/nanum-mask/pending/**)",
+      "Edit(//c/nanum-mask/secure/**)"
+    ]
+  }
+}

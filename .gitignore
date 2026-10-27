@@ -1,0 +1,33 @@
+# 공문 원본·가린 사본·대조표·학습 기록 (PC 밖으로 내보내지 않는 것)
+inbox/
+pending/
+masked/
+secure/
+learn/
+logs/
+*.log
+
+# 설치할 때 받는 것
+models/
+python311/
+node/
+kordoc/
+.venv/
+venv/
+
+# 시험 때 만드는 것
+tests/fake/
+tests/fake2/
+tests/out/
+tests/regress/
+tests/learn_*/
+results/
+dist/
+
+# 기타
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.claude/settings.local.json
