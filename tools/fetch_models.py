@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PDX = ROOT / "models/paddlex"
 NER_DIR = ROOT / "models/ner/koelectra-ko-pii-ner"
 NER_REPO = "atonlee/koelectra-ko-pii-ner"
+NER_REVISION = "1e75c01e707232401883cf364151bbe2e560c708"  # 시험한 판(커밋)으로 고정한다
 NER_FILES = ["config.json", "model.safetensors", "tokenizer.json", "tokenizer_config.json", "README.md"]
 # 시제품에서 시험한 파일의 SHA-256. 다르면 모델이 바뀐 것이므로 자체 시험을 다시 확인한다.
 NER_SHA256 = "e3ed229e2bc4299c98624f0a5bfc9c15e2d9942295dc2eba8a67105e628e92dc"
@@ -86,7 +87,7 @@ def fetch_ner() -> None:
     from huggingface_hub import hf_hub_download
     NER_DIR.mkdir(parents=True, exist_ok=True)
     for f in NER_FILES:
-        hf_hub_download(NER_REPO, f, local_dir=str(NER_DIR))
+        hf_hub_download(NER_REPO, f, revision=NER_REVISION, local_dir=str(NER_DIR))
 
 
 def fetch_kordoc() -> None:
